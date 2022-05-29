@@ -7,11 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.Collections.Specialized;
+using System.Net.Http;
+using System.IO;
+using Newtonsoft.Json.Linq;
+
 
 namespace POS
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
@@ -32,17 +39,54 @@ namespace POS
 
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private async void Button1_Click(object sender, EventArgs e)
         {
-           
-            Form2 form2 = new Form2();
-            form2.Show();
-            this.Hide();    
-            
-           
-           
+            string word = textBox1.Text;
+            string SDate = textBox2.Text;
+            string results = string.Empty;
+            JObject json=null;
+            //Genera request
+            string MoodysWebstring = @"http://proyecto-dev.us-east-1.elasticbeanstalk.com/getlogin/?User=" + word + "&Pwd=" + SDate;
+            Uri MoodysWebAddress = new Uri(MoodysWebstring);
+            HttpWebRequest request = WebRequest.Create(MoodysWebAddress) as HttpWebRequest;
+            request.Method = "GET";
+            request.ContentType = "text/xml";
+            HttpWebResponse response;
+            //Solicita Request
+            using (response = request.GetResponse() as HttpWebResponse)
+            {
+                StreamReader reader = new StreamReader(response.GetResponseStream());
+                results = reader.ReadToEnd();
+                //Intenta obtener el token
+                try
+                {
+                    json = JObject.Parse(results);
+                    Console.WriteLine((string)json["Token"]);
+                }
+                //Si no obtiene el token manda un mensaje de error
+                catch (Exception ex)
+                {
+                    Console.WriteLine(results);
+                }
+                
+            }
 
+            //Form2 form2 = new Form2();
+            //form2.Show();
+            //this.Hide();    
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        
+        
+       
     }
 }
