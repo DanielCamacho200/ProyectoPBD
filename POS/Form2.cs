@@ -17,8 +17,8 @@ namespace POS
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
-            form1.Show();
+            Form4 form4 = new Form4();
+            form4.Show();
             this.Hide();
             
 
@@ -27,9 +27,7 @@ namespace POS
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
-            form3.Show();
-            this.Hide();
+          
         }
 
         private void Button3_Click(object sender, EventArgs e)

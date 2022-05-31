@@ -71,17 +71,17 @@ namespace POS
                 
             }
 
-            //Form2 form2 = new Form2();
-            //form2.Show();
-            //this.Hide();    
+            Form4 form4 = new Form4();
+            form4.Show();
+            this.Hide();    
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void TextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void TextBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
