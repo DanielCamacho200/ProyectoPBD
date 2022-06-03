@@ -118,7 +118,40 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Open_sesionMini" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\Open_sesionMini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NewClienteMini" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\NewClienteMini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EditMini" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\EditMini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Arrow_Back2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\Arrow_Back2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CancelarMini" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\CancelarMini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TiketMini" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\TiketMini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Arrow_BackMini" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\Arrow_BackMini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DetallesMini" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\DetallesMini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Close_SesionMini" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\Close_SesionMini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="New_RegistroMini" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\New_RegistroMini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="User" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\User.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ResolverMin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\ResolverMin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

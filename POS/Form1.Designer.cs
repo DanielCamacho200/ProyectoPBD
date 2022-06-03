@@ -33,8 +33,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,6 +86,16 @@
             this.label3.Text = "Iniciar sesión";
             this.label3.Click += new System.EventHandler(this.Label3_Click);
             // 
+            // button1
+            // 
+            this.button1.Image = global::POS.Properties.Resources.Open_sesionMini;
+            this.button1.Location = new System.Drawing.Point(309, 245);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(46, 42);
+            this.button1.TabIndex = 6;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::POS.Properties.Resources.User;
@@ -95,22 +106,22 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // label4
             // 
-            this.button1.Location = new System.Drawing.Point(268, 246);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(81, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Iniciar sesión";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(235, 260);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Iniciar sesión";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(503, 286);
+            this.ClientSize = new System.Drawing.Size(503, 302);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
@@ -136,6 +147,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label4;
     }
 }
 

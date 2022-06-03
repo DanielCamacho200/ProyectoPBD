@@ -117,5 +117,38 @@
   <ItemGroup>
     <None Include="Icons\User.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Arrow_Back2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Arrow_BackMini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Close_SesionMini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\NewClienteMini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\DetallesMini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Open_sesionMini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\New_RegistroMini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\TiketMini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\EditMini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\CancelarMini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\ResolverMin.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
