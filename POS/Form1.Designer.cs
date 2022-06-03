@@ -87,9 +87,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(48, 94);
+            this.pictureBox1.Image = global::POS.Properties.Resources.User;
+            this.pictureBox1.Location = new System.Drawing.Point(62, 94);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(144, 122);
+            this.pictureBox1.Size = new System.Drawing.Size(134, 122);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
@@ -107,6 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(503, 286);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);

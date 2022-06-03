@@ -38,14 +38,14 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -150,6 +150,22 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Equipo";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(280, 198);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(91, 13);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Fecha de entrada";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(283, 223);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 7;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -200,26 +216,11 @@
             this.textBox4.Size = new System.Drawing.Size(139, 20);
             this.textBox4.TabIndex = 0;
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(283, 223);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 7;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(280, 198);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 13);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Fecha de entrada";
-            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 681);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -228,6 +229,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "Form3";
             this.Text = "Cliente";
+            this.Load += new System.EventHandler(this.Form3_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
