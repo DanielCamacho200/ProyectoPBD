@@ -12,7 +12,6 @@ namespace POS
     {
         String Token;
         List<Soporte> lista;
-        Soporte Parm;
         public Form4(string token)
         {
             InitializeComponent();
@@ -92,6 +91,8 @@ namespace POS
                 s.Problema=row.Cells[4].Value.ToString();
                 s.SN=row.Cells[5].Value.ToString();
                 s.Tecnico=row.Cells[6].Value.ToString();
+                s.Solucionado = row.Cells[7].Value.ToString();
+                s.Cancelado = row.Cells[8].Value.ToString();
                 Console.WriteLine(s.Id);
                 Form2 form2 = new Form2(s, Token);
                 form2.Show();

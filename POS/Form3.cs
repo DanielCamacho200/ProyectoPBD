@@ -11,9 +11,18 @@ namespace POS
     {
         String token;
         bool userClosed=true;
-        public Form3(string Token, Soporte Soporte) {
+        Cliente_info cliente;
+        Equipo_info equipo;
+        public Form3(string Token, Cliente_info Cliente) {
             InitializeComponent();
-            //Editar
+            token = Token;
+            cliente = Cliente;
+            groupBox2.Visible = false;
+            textBox1.Text = cliente.Nombre;
+            textBox3.Text = cliente.Email;
+            textBox2.Text = cliente.Phone.ToString();
+            label10.Text = "";
+            //editar
         }
         public Form3(string Token)
         {
@@ -22,6 +31,40 @@ namespace POS
             label10.Text = "";
             label12.Text = "";
             //Nuevo
+        }
+        private void ActualizarCliente()
+        {
+            string results = string.Empty;
+            //Genera request
+            string url = @"http://proyecto-dev.us-east-1.elasticbeanstalk.com/act_cliente/"+cliente.Id+"?Nombre=" + textBox1.Text + "&Email=" + textBox3.Text + "&Tel=" + textBox2.Text;
+            Uri MoodysWebAddress = new Uri(url);
+            var webRequest = System.Net.WebRequest.Create(MoodysWebAddress);
+            webRequest.Method = "GET";
+            webRequest.Timeout = 20000;
+            webRequest.ContentType = "application/json";
+            webRequest.PreAuthenticate = true;
+            webRequest.Headers.Add("Authorization", token);
+            HttpWebResponse response;
+            //Solicita Request
+            using (response = webRequest.GetResponse() as HttpWebResponse)
+            {
+                StreamReader reader = new StreamReader(response.GetResponseStream());
+                results = reader.ReadToEnd();
+                //Intenta obtener el token
+                try
+                {
+                    label10.Text = results;
+                }
+                //Si no obtiene el token manda un mensaje de error
+                catch (Exception ex)
+                {
+                    label10.Text = results;
+                    if (MessageBox.Show(ex.ToString(), "error",
+                        MessageBoxButtons.OK) == DialogResult.OK)
+                        System.Environment.Exit(0);
+                }
+
+            }
         }
         private void CrearCliente()
         {
@@ -116,7 +159,10 @@ namespace POS
 
         private void button3_Click(object sender, EventArgs e)
         {
-            CrearCliente();
+            if (this.cliente == null)
+                CrearCliente();
+            else
+                ActualizarCliente();
         }
 
         private void label11_Click(object sender, EventArgs e)

@@ -22,10 +22,17 @@ namespace POS
             label3.Visible = false;
             soporte = Soporte;
             token = Token;
+            if (soporte.Solucionado == "1") 
+            {
+                dateTimePicker1.Visible = true;
+                label3.Visible = true;
+            }
             SoporteInfo();
             ClienteInfo();
             EquipoInfo();
+            Console.WriteLine(listaSoporte[0].Final.ToString());
         }
+
         private void EquipoInfo()
         {
             string results = string.Empty;
@@ -165,12 +172,13 @@ namespace POS
             
             foreach(Soporte_info item in listaSoporte)
             {
-                dateTimePicker1.Value = item.Inicio;
+                dateTimePicker2.Value = item.Inicio;
                 richTextBox1.Text = item.Comentarios;
                 if (item.Solucionado == 1)
                 {
                     checkBox1.Checked = true;
-                    dateTimePicker2.Value = (DateTime)item.Final;
+                    richTextBox2.Text = item.Comentarios_cierre;
+                    dateTimePicker1.Value = (DateTime)item.Final;
                 }
 
 
@@ -238,6 +246,15 @@ namespace POS
 
         private void button4_Click(object sender, EventArgs e)
         {
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3(token, listaCliente[0]);
+            form3.Show();
+            userClosed = false;
+            this.Close();
+
         }
     }
 }

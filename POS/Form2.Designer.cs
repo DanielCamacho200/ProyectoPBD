@@ -55,7 +55,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
@@ -110,7 +109,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label10);
@@ -185,6 +183,7 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Location = new System.Drawing.Point(730, 257);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTimePicker1.Name = "dateTimePicker1";
@@ -194,6 +193,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
+            this.checkBox1.Enabled = false;
             this.checkBox1.Location = new System.Drawing.Point(730, 165);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBox1.Name = "checkBox1";
@@ -334,6 +334,7 @@
             this.button2.Size = new System.Drawing.Size(69, 65);
             this.button2.TabIndex = 16;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // dateTimePicker2
             // 
@@ -353,16 +354,6 @@
             this.label11.Size = new System.Drawing.Size(135, 20);
             this.label11.TabIndex = 8;
             this.label11.Text = "Fecha de entrada";
-            // 
-            // button3
-            // 
-            this.button3.Image = global::POS.Properties.Resources.EditMini;
-            this.button3.Location = new System.Drawing.Point(791, 72);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(69, 65);
-            this.button3.TabIndex = 17;
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -445,7 +436,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label1;

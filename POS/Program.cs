@@ -15,6 +15,9 @@ namespace POS
         public string SN { get; set; }
         public string Problema { get; set; }
         public string Tecnico { get; set; }
+        public string Solucionado { get; set; }
+        public string Cancelado { get; set; }
+
     }
     public class Soporte_info
     {
