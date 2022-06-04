@@ -12,14 +12,14 @@ namespace POS
 {
     public partial class Form3 : Form
     {
-        public Form3()
+        public Form3(string Token, object Detail)
         {
             InitializeComponent();
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            Form4 form4 = new Form4();
+            Form4 form4 = new Form4("123");
             form4.Show();
             this.Hide();
         }

@@ -22,6 +22,7 @@ namespace POS
         public Form1()
         {
             InitializeComponent();
+            label5.Hide();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -66,14 +67,20 @@ namespace POS
                 //Si no obtiene el token manda un mensaje de error
                 catch (Exception ex)
                 {
-                    Console.WriteLine(results);
+                    label5.Text = results;
+                    label5.Show();
+                    Console.WriteLine(ex);
+                }
+                if (json != null)
+                {
+                    Form4 form4 = new Form4((string)json["Token"]);
+                    form4.Show();
+                    this.Hide();
                 }
                 
             }
 
-            Form4 form4 = new Form4();
-            form4.Show();
-            this.Hide();    
+ 
         }
 
         private void TextBox1_TextChanged(object sender, EventArgs e)
@@ -85,8 +92,18 @@ namespace POS
         {
 
         }
-        
-        
-       
+
+        private void Form1_Closing(object sender, FormClosingEventArgs e)
+        {
+            if(e.CloseReason == CloseReason.UserClosing)
+                if (MessageBox.Show("Desea salir de la aplicacion?", "Salir",
+                MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    System.Environment.Exit(0);
+                }
+                else{
+                    e.Cancel = true;
+                }
+        }
     }
 }
