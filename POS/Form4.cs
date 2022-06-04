@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using System.Net;
 using System.IO;
 using Newtonsoft.Json;
-
+using System.Diagnostics;
 
 namespace POS
 {
@@ -17,12 +17,13 @@ namespace POS
             InitializeComponent();
             Token = "Token "+token;
             Inicio();
+            llenarComboBox();
+
         }
         private void Inicio() {
             try
             {
                 Historial();
-
             }
             catch (Exception ex) {
                 Console.WriteLine(ex);
@@ -128,6 +129,31 @@ namespace POS
         private void Form4_VisibleChanged(object sender, EventArgs e)
         {
             Inicio();
+        }
+
+        private void filterCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void llenarComboBox()
+        {
+            for (int i = 0; i < dataGridView1.ColumnCount; i++)
+            {
+                if((i != 0) && (i != 1) && (i != 3) && (i != 5))
+                {
+                    filterCombo.Items.Add(dataGridView1.Columns[i].HeaderText.ToString());
+                }
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string columnFilter = filterCombo.SelectedItem.ToString();
+            string filterSearch = filterText.Text.ToString();
+
+            Debug.Print(columnFilter);
+            Debug.Print(filterSearch);
         }
     }
 }

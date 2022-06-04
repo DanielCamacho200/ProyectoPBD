@@ -8,11 +8,15 @@ namespace POS
 {
     public class Soporte
     {
+        //No combo 0
         public string Id { get; set; }
+        //No combo 1
         public DateTime Inicio { get; set; }
         public string Cliente { get; set; }
+        //No combo 3
         public string Modelo { get; set; }
         public string SN { get; set; }
+        //No combo 5
         public string Problema { get; set; }
         public string Tecnico { get; set; }
         public string Solucionado { get; set; }
