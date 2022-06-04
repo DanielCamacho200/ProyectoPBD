@@ -152,18 +152,52 @@ namespace POS
         {
             string columnFilter = filterCombo.SelectedItem.ToString();
             string filterSearch = filterText.Text.ToString();
+            if(filterSearch == "") {
+                dataGridView1.DataSource = lista;
+            }
+            else
+            {
+                switch (columnFilter)
+                {
+                    case "Cliente":
+                        FiltrarLista(2, filterSearch);
+                        break;
+                    case "SN":
+                        FiltrarLista(4, filterSearch);
+                        break;
+                    case "Tecnico":
+                        FiltrarLista(6, filterSearch);
+                        break;
+                    case "Solucionado":
+                        FiltrarLista(7, filterSearch);
+                        break;
+                    case "Cancelado":
+                        FiltrarLista(8, filterSearch);
+                        break;
+                }
+            }
+            
+            Debug.Print(columnFilter);
+            Debug.Print(filterSearch);
+        }
+
+        private void FiltrarLista(int columna, string filtro)
+        {
             listaFiltrada = new List<Soporte>();
             dataGridView1.DataSource = lista;
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                if (row.Cells[2].Value.ToString() == filterSearch){
+                if (row.Cells[columna].Value.ToString() == filtro)
+                {
                     Soporte s = new Soporte();
                     s.Id = row.Cells[0].Value.ToString();
                     s.Inicio = Convert.ToDateTime(row.Cells[1].Value.ToString());
                     s.Cliente = row.Cells[2].Value.ToString();
                     s.Modelo = row.Cells[3].Value.ToString();
-                    s.Problema = row.Cells[4].Value.ToString();
-                    s.SN = row.Cells[5].Value.ToString();
+                    /*s.Problema = row.Cells[4].Value.ToString();
+                    s.SN = row.Cells[5].Value.ToString();*/
+                    s.SN = row.Cells[4].Value.ToString();
+                    s.Problema = row.Cells[5].Value.ToString();
                     s.Tecnico = row.Cells[6].Value.ToString();
                     s.Solucionado = row.Cells[7].Value.ToString();
                     s.Cancelado = row.Cells[8].Value.ToString();
@@ -172,8 +206,6 @@ namespace POS
                 }
             }
             dataGridView1.DataSource = listaFiltrada;
-            Debug.Print(columnFilter);
-            Debug.Print(filterSearch);
         }
     }
 }
