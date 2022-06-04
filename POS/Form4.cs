@@ -12,6 +12,7 @@ namespace POS
     {
         String Token;
         List<Soporte> lista;
+        List<Soporte> listaFiltrada;
         public Form4(string token)
         {
             InitializeComponent();
@@ -151,7 +152,26 @@ namespace POS
         {
             string columnFilter = filterCombo.SelectedItem.ToString();
             string filterSearch = filterText.Text.ToString();
+            listaFiltrada = new List<Soporte>();
+            dataGridView1.DataSource = lista;
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[2].Value.ToString() == filterSearch){
+                    Soporte s = new Soporte();
+                    s.Id = row.Cells[0].Value.ToString();
+                    s.Inicio = Convert.ToDateTime(row.Cells[1].Value.ToString());
+                    s.Cliente = row.Cells[2].Value.ToString();
+                    s.Modelo = row.Cells[3].Value.ToString();
+                    s.Problema = row.Cells[4].Value.ToString();
+                    s.SN = row.Cells[5].Value.ToString();
+                    s.Tecnico = row.Cells[6].Value.ToString();
+                    s.Solucionado = row.Cells[7].Value.ToString();
+                    s.Cancelado = row.Cells[8].Value.ToString();
+                    listaFiltrada.Add(s);
 
+                }
+            }
+            dataGridView1.DataSource = listaFiltrada;
             Debug.Print(columnFilter);
             Debug.Print(filterSearch);
         }
