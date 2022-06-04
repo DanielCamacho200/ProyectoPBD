@@ -68,15 +68,16 @@ namespace POS
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
-            form1.Show();
-            this.Close();
+            Program.form1.Show();
+            this.Hide();
 
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            Console.WriteLine(dataGridView1.CurrentCell);
+            Form3 form3 = new Form3(Token);
+            form3.Show();
+            this.Hide();
         }
 
         private void Button3_Click(object sender, EventArgs e)
@@ -94,6 +95,7 @@ namespace POS
                 Console.WriteLine(s.Id);
                 Form2 form2 = new Form2(s, Token);
                 form2.Show();
+                this.Hide();
             }
 
         }
@@ -105,12 +107,26 @@ namespace POS
 
         private void Form4_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            if (e.CloseReason == CloseReason.UserClosing)
+                if (MessageBox.Show("Desea salir de la aplicacion?", "Salir",
+                MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    System.Environment.Exit(0);
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void Form4_VisibleChanged(object sender, EventArgs e)
+        {
+            Inicio();
         }
     }
 }

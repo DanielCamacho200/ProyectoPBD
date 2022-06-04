@@ -45,19 +45,21 @@ namespace POS
         public string Modelo { get; set; }
         public string SN { get; set; }
     }
-
+    
     internal static class Program
     {
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
+        public static Form1 form1;
         [STAThread]
-
+        
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            new Form1().Show(); 
+            form1 = new Form1();
+            form1.Show();
             Application.Run();
         }
     }

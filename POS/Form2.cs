@@ -14,9 +14,12 @@ namespace POS
         List<Cliente_info> listaCliente;
         List<Equipo_info> listaEquipo;
         String token;
+        bool userClosed = true;
         public Form2(Soporte Soporte, String Token)
         {
             InitializeComponent();
+            dateTimePicker1.Visible = false;
+            label3.Visible = false;
             soporte = Soporte;
             token = Token;
             SoporteInfo();
@@ -127,7 +130,7 @@ namespace POS
         {
             string results = string.Empty;
             //Genera request
-            string url = @"http://proyecto-dev.us-east-1.elasticbeanstalk.com/cerrar_soporte/" + soporte.Id+ "?Cierre="+richTextBox1.Text;
+            string url = @"http://proyecto-dev.us-east-1.elasticbeanstalk.com/cerrar_soporte/" + soporte.Id+ "?Cierre="+richTextBox2.Text;
             Uri MoodysWebAddress = new Uri(url);
             var webRequest = System.Net.WebRequest.Create(MoodysWebAddress);
             webRequest.Method = "GET";
@@ -139,15 +142,12 @@ namespace POS
             //Solicita Request
             using (response = webRequest.GetResponse() as HttpWebResponse)
             {
-                StreamReader reader = new StreamReader(response.GetResponseStream());
-                results = reader.ReadToEnd();
-                //Intenta obtener el token
                 try
                 {
-                    Console.WriteLine(results);
-                    Form2 form2 = new Form2(soporte, token);
-                    form2.Show();
-                    this.Close();
+                    StreamReader reader = new StreamReader(response.GetResponseStream());
+                    results = reader.ReadToEnd();            
+                    MessageBox.Show("Soporte Resuelto con exito");
+                    Cerrar();
 
                 }
                 //Si no obtiene el token manda un mensaje de error
@@ -160,7 +160,6 @@ namespace POS
 
             }
         }
-
         private void Form2_Load(object sender, EventArgs e)
         {
             
@@ -192,12 +191,12 @@ namespace POS
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Form4 form4 = new Form4("123");
-            form4.Show();
-            this.Hide();
-            
-
-
+            Cerrar();
+        }
+        private void Cerrar(){
+            Program.form1.form4.Show();
+            userClosed = false;
+            this.Close();
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -217,7 +216,28 @@ namespace POS
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Resolver();
+            if (richTextBox2.Text == "")
+                MessageBox.Show("Porfavor ingrese comentarios de cierre", "Error");
+            else
+                Resolver();
+        }
+
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (userClosed)
+                if (MessageBox.Show("Desea salir de la aplicacion?", "Salir",
+                    MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    System.Environment.Exit(0);
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
         }
     }
 }

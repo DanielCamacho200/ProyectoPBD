@@ -25,6 +25,8 @@ namespace POS
             label5.Hide();
         }
 
+        public Form4 form4;
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -73,7 +75,7 @@ namespace POS
                 }
                 if (json != null)
                 {
-                    Form4 form4 = new Form4((string)json["Token"]);
+                    form4 = new Form4((string)json["Token"]);
                     form4.Show();
                     this.Hide();
                 }
