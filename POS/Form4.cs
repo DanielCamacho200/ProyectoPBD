@@ -150,7 +150,20 @@ namespace POS
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string columnFilter = filterCombo.SelectedItem.ToString();
+            string columnFilter;
+            if (filterCombo.SelectedItem == null)
+            {
+                if (MessageBox.Show("Seleccione una Columna valida", "error",
+                        MessageBoxButtons.OK) == DialogResult.OK)
+                    this.Close();
+                columnFilter = "";
+            } else
+            {
+                columnFilter = filterCombo.SelectedItem.ToString();
+            }
+                
+            
+            
             string filterSearch = filterText.Text.ToString();
             if(filterSearch == "") {
                 dataGridView1.DataSource = lista;
@@ -173,6 +186,9 @@ namespace POS
                         break;
                     case "Cancelado":
                         FiltrarLista(8, filterSearch);
+                        break;
+                    default:
+                        dataGridView1.DataSource = lista;
                         break;
                 }
             }
