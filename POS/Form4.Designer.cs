@@ -66,37 +66,40 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(318, 55);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(304, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(174, 20);
+            this.label1.Size = new System.Drawing.Size(199, 24);
             this.label1.TabIndex = 4;
             this.label1.Text = "Soportes en sistema";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(70, 499);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(64, 494);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 13);
+            this.label2.Size = new System.Drawing.Size(107, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Nuevo Cliente";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(258, 499);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(251, 494);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 13);
+            this.label3.Size = new System.Drawing.Size(67, 20);
             this.label3.TabIndex = 6;
             this.label3.Text = "Detalles";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(649, 42);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(611, 37);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 13);
+            this.label4.Size = new System.Drawing.Size(111, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "Cerrar Sersión";
             // 
@@ -132,7 +135,7 @@
             // 
             // filterText
             // 
-            this.filterText.Location = new System.Drawing.Point(255, 27);
+            this.filterText.Location = new System.Drawing.Point(259, 53);
             this.filterText.Name = "filterText";
             this.filterText.Size = new System.Drawing.Size(222, 20);
             this.filterText.TabIndex = 8;
@@ -140,16 +143,17 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 30);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(12, 56);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 13);
+            this.label6.Size = new System.Drawing.Size(47, 13);
             this.label6.TabIndex = 10;
             this.label6.Text = "Filtrar: ";
             // 
             // filterCombo
             // 
             this.filterCombo.FormattingEnabled = true;
-            this.filterCombo.Location = new System.Drawing.Point(57, 27);
+            this.filterCombo.Location = new System.Drawing.Point(65, 53);
             this.filterCombo.Name = "filterCombo";
             this.filterCombo.Size = new System.Drawing.Size(121, 21);
             this.filterCombo.TabIndex = 11;
@@ -159,15 +163,16 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(210, 30);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(209, 56);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 13);
+            this.label5.Size = new System.Drawing.Size(44, 13);
             this.label5.TabIndex = 12;
             this.label5.Text = "Donde";
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(497, 25);
+            this.btnSearch.Location = new System.Drawing.Point(496, 51);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(52, 23);
             this.btnSearch.TabIndex = 13;
@@ -188,9 +193,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(409, 499);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(397, 494);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 13);
+            this.label7.Size = new System.Drawing.Size(106, 20);
             this.label7.TabIndex = 15;
             this.label7.Text = "Crear soporte";
             // 
@@ -200,7 +206,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 541);
+            this.ClientSize = new System.Drawing.Size(792, 541);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btnSearch);
