@@ -176,6 +176,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 541);
             this.Controls.Add(this.btnSearch);
@@ -192,6 +193,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form4";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rgistro de soporte";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form4_FormClosing);
             this.Load += new System.EventHandler(this.Form4_Load);
