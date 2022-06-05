@@ -80,7 +80,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(216, 26);
+            this.label3.Location = new System.Drawing.Point(171, 25);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(152, 25);
             this.label3.TabIndex = 4;
@@ -90,7 +90,7 @@
             // button1
             // 
             this.button1.Image = global::POS.Properties.Resources.Open_sesionMini;
-            this.button1.Location = new System.Drawing.Point(309, 245);
+            this.button1.Location = new System.Drawing.Point(261, 248);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(46, 42);
             this.button1.TabIndex = 6;
@@ -110,7 +110,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(235, 260);
+            this.label4.Location = new System.Drawing.Point(187, 263);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 13);
             this.label4.TabIndex = 7;
