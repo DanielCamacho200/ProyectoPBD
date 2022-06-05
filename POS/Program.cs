@@ -52,7 +52,20 @@ namespace POS
         public string Modelo { get; set; }
         public string SN { get; set; }
     }
-    
+    public class Clientes
+    {
+        public int Id { get; set; }
+        public string Nombre { get; set; }
+        public string Email { get; set; }
+        public int Phone { get; set; }
+    }
+    public class Equipos
+    {
+        public int Id { get; set; }
+        public string Marca { get; set; }
+        public string Modelo { get; set; }
+        public string SN { get; set; }
+    }
     internal static class Program
     {
         /// <summary>

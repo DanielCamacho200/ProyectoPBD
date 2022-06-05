@@ -13,10 +13,12 @@ namespace POS
         String Token;
         List<Soporte> lista;
         List<Soporte> listaFiltrada;
-        public Form4(string token)
+        String user;
+        public Form4(string token, string User)
         {
             InitializeComponent();
             Token = "Token "+token;
+            user = User;
             Inicio();
             llenarComboBox();
 
@@ -222,6 +224,13 @@ namespace POS
                 }
             }
             dataGridView1.DataSource = listaFiltrada;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form5 form5 = new Form5(Token, user);
+            form5.Show();
+            this.Hide();
         }
     }
 }

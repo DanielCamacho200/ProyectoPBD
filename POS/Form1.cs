@@ -75,7 +75,7 @@ namespace POS
                 }
                 if (json != null)
                 {
-                    form4 = new Form4((string)json["Token"]);
+                    form4 = new Form4((string)json["Token"], textBox1.Text);
                     form4.Show();
                     this.Hide();
                 }
